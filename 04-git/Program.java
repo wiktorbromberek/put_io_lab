@@ -1,12 +1,12 @@
 public class Main {
-  int x = 5;
+  int x = 10;
   int y= 55;
 
 
-	int z = 60;
+	int z = 70;
 
 	cos tam;
 
 
-	nie wiem co tu spisac
+	nie wiem nadal co tu spisac
 }
