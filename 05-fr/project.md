@@ -54,6 +54,7 @@ Osoba chcąca zakupić produkt na aukcji.
 * [UC2](#uc1): Nadanie produktu kupującemu
 
 [Kupujący](#ac2)
+* [UC*] Przegląd dostępnych aukcji
 * [BR1](#ac2): Zaproponowanie kwoty za przedmiot większej od poprzedniej kwoty, lub kwoty wywoławczej
 * (#ac2): Przekazanie należności sprzedającemu
 
