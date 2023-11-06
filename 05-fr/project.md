@@ -157,7 +157,6 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                           | Aukcja | Produkt | ... |
 | -----------------------------------------------------------| ------ | ------- | --- |
 | UC1: Wystawienia produktu na aukcję                        |    C   |    C    | ... |
-| UC2: Podbicie stawki poprzez użytkownika                   |    U   |    U    | ... |
-| UC3: Przekazanie pieniędzy przez wygrywającego licytację   |    R   |    R    | ... |
-| UC4: Nadanie paczki do wygrywającego                       |    D   |    D    | ... |
-
+| UC2: Podbicie stawki poprzez użytkownika                   |    U   |    -    | ... |
+| UC3: Przekazanie pieniędzy przez wygrywającego licytację   |   R,U  |    R    | ... |
+| UC4: Nadanie paczki do wygrywającego                       |        |         | ... |
