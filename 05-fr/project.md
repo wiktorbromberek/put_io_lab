@@ -97,30 +97,28 @@ Osoba chcąca zakupić produkt na aukcji.
 
 
 <a id="uc3"></a>
-### UC2: Przekazanie pieniędzy przez wygrywającego licytację
+### UC3: Przekazanie pieniędzy przez wygrywającego licytację
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2) 
 
 **Scenariusz główny:**
-1. System wysyła maila do zwycięzkiego kupującego z informacją o wygranej i terminie płatności
-3. [Kupujący](#ac2) Wygrany kupujący wykonuje lub nie płatność na rzecz sprzedającego
+1. System wysyła wiadomosc do zwycięzkiego kupującego z informacją o wygranej i terminie płatności
+2. [Kupujący](#ac2) Wygrany kupujący wykonuje płatność na rzecz sprzedającego
 3. System sprawdza po upływie terminu czy dokonano płatności
 
 **Scenariusze alternatywne:** 
 
-1.A. Nieprzekazanie pieniędzy przez kupującego
-* 4.A.1. System zgłasza się do osoby która zaraz po pierwszej wystawiła największą kwotę
+2.A. Nieprzekazanie pieniędzy przez kupującego
+* 1.A.1. System zgłasza się do osoby która zaraz po pierwszej wystawiła największą kwotę
 
 <a id="uc4"></a>
-### UC2: Nadanie paczki do wygrywającego
+### UC4: Nadanie paczki do wygrywającego
 
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System zgłasza sprzedawcy dane kupującego oraz dane aukcji
+1. System zgłasza sprzedawcy dane kupującego oraz dane aukcji oraz opcje wysyłki
 2. [Sprzedający](#ac1) wybiera usługodawcę kurierskiego
-3. [Sprzedający](#ac1) Zgłasza paczkę do systemu kurierskiego wysyłając ją kupującemu
-4. System wysyła kupującemu dane przesyłki
 
 **Scenariusze alternatywne:** 
 
@@ -158,7 +156,7 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                           | Aukcja | Produkt | ... |
 | -----------------------------------------------------------| ------ | ------- | --- |
 | UC1: Wystawienia produktu na aukcję                        |    C   |    C    | ... |
-| UC2: Podbicie stawki poprzez użytkownika                   |  ...   |  ...    | ... |
-| UC3: Przekazanie pieniędzy przez wygrywającego licytację   |  ...   |  ...    | ... |
-| UC4: Nadanie paczki do wygrywającego                       |  ...   |  ...    | ... |
+| UC2: Podbicie stawki poprzez użytkownika                   |    U   |    U    | ... |
+| UC3: Przekazanie pieniędzy przez wygrywającego licytację   |    R   |    R    | ... |
+| UC4: Nadanie paczki do wygrywającego                       |    D   |    D    | ... |
 
