@@ -20,7 +20,7 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
 3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
 4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.([UC2](#uc2))
 
 **Scenariusze alternatywne:** 
 
@@ -51,10 +51,11 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC2](#uc1): Nadanie produktu kupującemu
 
 [Kupujący](#ac2)
-* ...
+* [BR1](#ac2): Zaproponowanie kwoty za przedmiot większej od poprzedniej kwoty, lub kwoty wywoławczej
+* (#ac2): Przekazanie należności sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -78,17 +79,54 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Podbicie stawki poprzez użytkownika
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. System wyświetla dostępne produkty
+2. [Kupujący](#ac2) znajduje interesujący go produkt
+3. [Kupujący](#ac2) zgłasza do systemu nową kwotę
+4. System sprawdza poprawność danych i aktualizuję kwotę na licytacji
+5. [Kupujący](#ac2) powtarza krok 3 lub zaprzestaje licytacji 
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. Podano niższą/niepoprawną kwotę
+* 4.A.1. Prośba o wpisanie poprawnej kwoty
+
+
+<a id="uc3"></a>
+### UC2: Przekazanie pieniędzy przez wygrywającego licytację
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2) 
+
+**Scenariusz główny:**
+1. System wysyła maila do zwycięzkiego kupującego
+2. [Kupujący](#ac2) jest poinformowany o wygranej i o terminie płatności
+3. [Kupujący](#ac2) Wygrany kupujący wykonuje lub nie płatność na rzecz sprzedającego
+4. System sprawdza po upływie terminu czy dokonano płatności
+
+**Scenariusze alternatywne:** 
+
+1.A. Nieprzekazanie pieniędzy przez kupującego
+* 4.A.1. System zgłasza się do osoby która zaraz po pierwszej wystawiła największą kwotę
+
+<a id="uc4"></a>
+### UC2: Nadanie paczki do wygrywającego
+
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. System zgłasza sprzedawcy dane kupującego oraz dane aukcji
+2. [Sprzedający](#ac1) wybiera usługodawcę kurierskiego
+3. [Sprzedający](#ac1) Zgłasza paczkę do systemu kurierskiego wysyłając ją kupującemu
+4. System wysyła kupującemu dane przesyłki
+
+**Scenariusze alternatywne:** 
+
+1.A. Paczka niedoręczona/zagubiona
+* 4.A.1. Zwrot pieniędzy na konto kupującego
 
 ---
 
