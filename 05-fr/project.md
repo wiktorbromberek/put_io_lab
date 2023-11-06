@@ -86,14 +86,14 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. System wyświetla dostępne produkty
 2. [Kupujący](#ac2) znajduje interesujący go produkt
-3. [Kupujący](#ac2) zgłasza do systemu nową kwotę
+3. [Kupujący](#ac2) zgłasza chęć licytacji i podaje kwotę
 4. System sprawdza poprawność danych i aktualizuję kwotę na licytacji
-5. [Kupujący](#ac2) powtarza krok 3 lub zaprzestaje licytacji 
+5. System informuje kupującego o pomyślnym przebiciu oferty 
 
 **Scenariusze alternatywne:** 
 
 1.A. Podano niższą/niepoprawną kwotę
-* 4.A.1. Prośba o wpisanie poprawnej kwoty
+* 4.A.1. System prosi o wpisanie poprawnej kwoty i kieruje do kroku 3
 
 
 <a id="uc3"></a>
@@ -102,10 +102,9 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2) 
 
 **Scenariusz główny:**
-1. System wysyła maila do zwycięzkiego kupującego
-2. [Kupujący](#ac2) jest poinformowany o wygranej i o terminie płatności
+1. System wysyła maila do zwycięzkiego kupującego z informacją o wygranej i terminie płatności
 3. [Kupujący](#ac2) Wygrany kupujący wykonuje lub nie płatność na rzecz sprzedającego
-4. System sprawdza po upływie terminu czy dokonano płatności
+3. System sprawdza po upływie terminu czy dokonano płatności
 
 **Scenariusze alternatywne:** 
 
@@ -130,7 +129,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 ---
 
-## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
+## Obiekty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
 
 ### BO1: Aukcja
 
@@ -156,8 +155,10 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 ## Macierz CRUDL
 
 
-| Przypadek użycia                                  | Aukcja | Produkt | ... |
-| ------------------------------------------------- | ------ | ------- | --- |
-| UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| Przypadek użycia                                           | Aukcja | Produkt | ... |
+| -----------------------------------------------------------| ------ | ------- | --- |
+| UC1: Wystawienia produktu na aukcję                        |    C   |    C    | ... |
+| UC2: Podbicie stawki poprzez użytkownika                   |  ...   |  ...    | ... |
+| UC3: Przekazanie pieniędzy przez wygrywającego licytację   |  ...   |  ...    | ... |
+| UC4: Nadanie paczki do wygrywającego                       |  ...   |  ...    | ... |
 
